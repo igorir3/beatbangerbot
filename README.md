@@ -50,7 +50,7 @@
 Instruction manual:
 Download the .exe file and run it in any folder. The settings.json file will be created (if there is none), after which the program will suggest changing it,
 after changing (or ignoring this requirement) you need to press Enter and the bot will start automatically
-Further on the structure and settings of the settings file.json
+Further on the structure and settings of the settings.json file
 
 This column is responsible for the settings of the key:
 ```
@@ -61,7 +61,7 @@ This column is responsible for the settings of the key:
 21 <- B
 ]...
 ```
-In this column, you need to enter the pixel coordinates for scaning, however, this parameter should be prescribed only if ``"coordinatesratio" : false``` 
+In this column, you need to enter the pixel coordinates for scaning, however, this parameter should be prescribed only if ```"coordinatesratio" : false``` 
 ```
 "coordinates": [
 973,
@@ -70,10 +70,10 @@ In this column, you need to enter the pixel coordinates for scaning, however, th
 ```
 If it is true, it will calculate the coordinates of the point using the formula, if your monitor isn't 1920x1080, it may cause errors!
 Also note that this parameter takes the default point that is on the button in the expanded game window (not Fullscreen or borderless, namely the window mode in full screen)
-``"coordinatesratio": true``
+```"coordinatesratio": true```
 
 Monitor parameters, FullHD by default
-``
+```
 "monitor": [
 1920,
 1080
@@ -81,4 +81,4 @@ Monitor parameters, FullHD by default
 ```
 The parameter needed for fine tuning outputs all the colors of the readable pixel, taking into account the filter for grayscale.
 This parameter may cause errors in the display of keystrokes (The keys will be pressed normally, but on the console screen, they will look broken).
-``"outputcolor": false``
+```"outputcolor": false```
