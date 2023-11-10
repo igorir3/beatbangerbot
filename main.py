@@ -35,24 +35,22 @@ with open("settings.json", "r") as jsonfile:
 if settdict["outputcolor"]:
     debug_color_bool = True
 
-if settdict["coordinatesratio"] == True and settdict["monitor"] == [1920, 1080]:
-    monitor = {
-        "left" : 973,
-        "top" : 920,
-        "width" : 1,
-        "height" : 1
-    }
-elif settdict["coordinatesratio"] == True:
-    monitor = {
-        "left" : settdict["monitor"][0] * (1920 / 973),
-        "top" : settdict["monitor"][1] * (1080 / 920),
-        "width" : 1,
-        "height" : 1
-    }
+leftm = 0
+ropm = 0
+
+if settdict["coordinatesratio"] and settdict["monitor"] == [1920, 1080]:
+    leftm = 973
+    ropm = 920
+elif settdict["coordinatesratio"]:
+    leftm = round(settdict["monitor"][0] * (1920 / 973)),
+    ropm = round(settdict["monitor"][1] * (1080 / 920)),
 else:
-    monitor = {
-        "left" : settdict["coordinates"][0],
-        "top" : settdict["coordinates"][1],
+    leftm = settdict["coordinates"][0],
+    ropm = settdict["coordinates"][1],
+
+monitor = {
+        "left" : leftm,
+        "top" : ropm,
         "width" : 1,
         "height" : 1
     }
