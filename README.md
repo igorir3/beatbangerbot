@@ -50,7 +50,7 @@
 Instruction manual:
 Download the .exe file and run it in any folder. The settings.json file will be created (if there is none), after which the program will suggest changing it,
 after changing (or ignoring this requirement) you need to press Enter and the bot will start automatically
-Further on the structure and settings of the settings file.json
+Further on the structure and settings of the settings.json file
 
 This column is responsible for the settings of the key:
 ```
