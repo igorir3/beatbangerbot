@@ -77,7 +77,8 @@ while True:
     if color in buttons_color and button == None: button = buttons[buttons_color.index(color)]
     if button != None:
         keyboard.press(button)
-        time.sleep(0.05)
+        time.sleep(0.05) # Если ты читаешь это, то учти что этот параметр отвечает за задержку нажатия (И да, она нужна). И ни в коем случае 
+                         #не делай модификаций кода, позволяющие менять этот параметр каким либо образом, кроме открытия исходного кода
         keyboard.release(button)
         
         log_buttons = log_buttons + button
