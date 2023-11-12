@@ -42,8 +42,8 @@ if settdict["coordinatesratio"] and settdict["monitor"] == [1920, 1080]:
     leftm = 973
     ropm = 920
 elif settdict["coordinatesratio"]:
-    leftm = round(settdict["monitor"][0] * (1920 / 973)),
-    ropm = round(settdict["monitor"][1] * (1080 / 920)),
+    leftm = round(settdict["monitor"][0] * (973 / 1920)),
+    ropm = round(settdict["monitor"][1] * (920 / 1080)),
 else:
     leftm = settdict["coordinates"][0],
     ropm = settdict["coordinates"][1],
