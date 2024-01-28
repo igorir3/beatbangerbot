@@ -21,7 +21,11 @@ def debug_color(inl):
 while True:
     if not(os.path.exists("settings.json")):
         print("settings.json not found, creation...")
-        classical_dict = {"monitor" : [1920, 1080], "coordinatesratio" : True, "coordinates" : [973, 920], "buttons": {"d":[164, 116, 21], "f":[10, 99, 196], "j":[19, 36, 164], "k":[82, 36, 141]}, "outputcolor" : False}
+        button_1 = input("Enter keybind for first button: ")
+        button_2 = input("Enter keybind for second button: ")
+        button_3 = input("Enter keybind for third button: ")
+        button_4 = input("Enter keybind for forth button: ")
+        classical_dict = {"monitor" : [1920, 1080], "coordinatesratio" : True, "coordinates" : [973, 920], "buttons": {f"{button_1}":[164, 116, 21], f"{button_2}":[10, 99, 196], f"{button_3}":[19, 36, 164], f"{button_4}":[82, 36, 141]}, "outputcolor" : False}
         with open("settings.json", "w+") as jsonfile:
             json.dump(classical_dict, jsonfile, sort_keys=True, indent=4)
         print("settings.json is created!")
